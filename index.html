@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Coding Operators</title>
+	<style>
+		body{ 
+			font-family: Arial, sans-serif;
+			margin: 20px;
+		}
+		.container{
+			max-width: 300px;
+			margin: auto;
+		}
+		label, input, button{
+			display: block;
+			margin: auto;
+			width: 200px
+		}
+		button{
+			padding: 5px;
+			margin-bottom: 5px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>My Calculator</h1>
+		<label for="number1">Enter First Number:</label>
+		<input type="number" id="number1">
+
+		<label for="number2">Enter Second Number:</label>
+		<input type="number" id="number2"> <br>
+
+		<button onclick="AddOp()" class="button">Add</button>
+		<button onclick="SubOp()" class="button">Subtract</button>
+		<button onclick="MulOp()" class="button">Multiply</button>
+		<button onclick="DivOp()" class="button">Divide</button>
+
+		<div id="result"></div>
+	</div>
+	<script>
+		function AddOp() {
+			const num1= parseFloat (document.getElementById('number1').value);
+			const num2= parseFloat (document.getElementById('number2').value);
+
+			const ResultSum = num1 + num2;
+
+			document.getElementById ('result').textContent = `The sum is: ${ResultSum}`;
+		}
+		function SubOp() {
+			const num1= parseFloat (document.getElementById('number1').value);
+			const num2= parseFloat (document.getElementById('number2').value);
+
+			const ResultSum = num1 - num2
+		}
+		function MulOp() {
+			const num1= parseFloat (document.getElementById('number1').value);
+			const num2= parseFloat (document.getElementById('number2').value);
+
+			const ResultSum = num1 * num2;
+
+			document.getElementById ('result').textContent = `The sum is: ${ResultSum}`;
+		}
+		function DivOp() {
+			const num1= parseFloat (document.getElementById('number1').value);
+			const num2= parseFloat (document.getElementById('number2').value);
+
+			const ResultSum = num1 / num2
+		}
+	</script>
+
+</body>
+</html>
